@@ -13,3 +13,5 @@ A commit records changes to the repository. A good commit message will swiftly e
 
 * What is a merge conflict?
 It is when Git can't figure out the changes made to a certain file and needs the user to solve the conflict. Example: if one person deletes the file while the other person modified it OR if two people changed the same lines in the same file. 
+
+**Adding words below for tagging a teacher.**
