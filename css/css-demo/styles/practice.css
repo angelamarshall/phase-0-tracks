@@ -1,0 +1,34 @@
+#contact-info {
+  font-size: .8em;
+}
+
+#job {
+  background-color: #e9e5dc;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.responsibilities {
+  font-size: .8em;
+}
+
+/* Psuedo classes */
+
+.experience-category:hover {
+  color: orange;
+}
+
+ul.responsibilities li:last-child {
+  font-weight: bold;
+}
+
+section:not(#volunteer-experience):not(.volunteer-gig) {
+  background: lightgray;
+}
+
+/* Nested elements */
+
+ul li {
+  font-family: 'Helvetica', sans-serif;
+}
