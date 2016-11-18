@@ -13,7 +13,6 @@ def encrypt (string)
     puts new_string
 end
 
-encrypt("abcde")
 
 def decrypt (string)
 alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -28,4 +27,24 @@ alphabet = "abcdefghijklmnopqrstuvwxyz"
     puts new_string
 end
 
-decrypt("abc")
+
+#Driver Code
+
+#this worked as the encrypt method because it used the last command opposed to the first
+#decrypt(encrypt("swordfish"))
+
+#ask user if they would like to decrypt or encrypt 
+puts "Would you like to decrypt or encrypt a password?"
+preference = gets.chomp
+
+#ask user for their password
+puts "What is your password?"
+password = gets.chomp
+
+	if preference == "decrypt"
+		puts decrypt(password)
+	else
+		puts encrypt(password)
+	end
+
+
