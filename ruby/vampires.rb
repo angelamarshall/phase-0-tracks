@@ -22,20 +22,34 @@ employees = gets.chomp.to_i
     	puts "Would you like to enroll in the company’s health insurance?"
   		health_insurance = gets[0] == "y"
 
-		if (age == correct_year) && ((garlic == true) || (health_insurance == true))
-			print "Probably not a vampire."
-		elsif (age != correct_year) && ((garlic == false) || (health_insurance == false))
-			print "Probably a vampire."
-		elsif ((age != correct_year) && (garlic == false) && (health_insurance == false))
-			print "Almost certainly a vampire."
-		elsif applicant_name == "Drake Cula" || "Tu Fang"
-			print "Definitely a vampire."
-		else
-			print "Results inconclusive."
-		end
+      loop do
+        puts "Please name any allergies you have one at a time. Say 'done' when you are finished:"
+        answer = gets.chomp 
+        if answer == "done"
+          break
+        elsif answer == "sunshine"
+          puts "Probably a vampire."
+          break
+        end
+      end
+
+		  if (age == correct_year) && ((garlic == true) || (health_insurance == true))
+			   print "Probably not a vampire."
+	 	  elsif (age != correct_year) && ((garlic == false) || (health_insurance == false))
+			   print "Probably a vampire."
+		  elsif ((age != correct_year) && (garlic == false) && (health_insurance == false))
+			   print "Almost certainly a vampire."
+	   	elsif applicant_name == "Drake Cula" || "Tu Fang"
+			   print "Definitely a vampire."
+		  else
+			   print "Results inconclusive."
+		  end
+# ^^ This is not coming out with the proper results.... not sure what I am doing wrong at this point. The logic behind it seems legitimate to me. 
+# Also... it still prints results before the 'loop do' results opposed to after
+
   	employees-=1
   	end
 
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
-# This is not coming out with the proper results.... not sure what I am doing wrong at this point. The logic behind it seems legitimate to me. 
 
