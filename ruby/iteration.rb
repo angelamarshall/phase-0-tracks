@@ -1,8 +1,8 @@
 def test_5_3 
-	name1 = "RJ"
-	name2 = "Angela"
-	puts "Inside method"
-	yield(name1, name2)
+  name1 = "RJ"
+  name2 = "Angela"
+  puts "Inside method"
+  yield(name1, name2)
 end
 
 test_5_3 { |name1, name2| puts "Outside method, #{name1} and #{name2}."}
