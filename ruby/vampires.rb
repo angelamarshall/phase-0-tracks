@@ -15,6 +15,7 @@ employees = gets.chomp.to_i
     	puts "Would you like to enroll in the company’s health insurance?"
   		health_insurance = gets[0] == "y"
 
+
 		  if (age == correct_year) && ((garlic == true) || (health_insurance == true))
 			    result = "Probably not a vampire."
       else 
@@ -33,9 +34,9 @@ employees = gets.chomp.to_i
           result = "Results inconclusive."
       end
      
-      if applicant_name == "Drake Cula" || "Tu Fang"
+      if applicant_name == "Drake Cula" || !"Tu Fang"
 			    result = "Definitely a vampire."
-      else 
+      else
           result = "Results inconclusive."
 		  end
 
