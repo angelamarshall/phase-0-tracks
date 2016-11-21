@@ -1,0 +1,5 @@
+How can your workflow improve? 
+What mistakes have caused you the most trouble in the past?
+
+I have been pretty good about indenting my code. I was not at first but ever since I practiced doing that more it has helped a lot! I haven’t had an issue with packing too much code on a line, but sometimes I do not name my variables well enough. I have been confused by the names I gave them in the past and hope to improve in that! It’s important that not only I can read them but others can too. 
+Also, I need to read more code and become more familiar with what it is actually doing. I want to get better at explaining verbally what is going on opposed to just knowing what to input. I need to practice more to truly understand what it is that I am inputting. In one of the past lessons I tried to commit a lot more frequently and it was nice! I need to switch branches more often so I can always undo and backtrack using branches. I do not change branches often, I have just been changing them per lesson. All of this info on debugging is helpful! I will be sure to use it more often in my work. 
