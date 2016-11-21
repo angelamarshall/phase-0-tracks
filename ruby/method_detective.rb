@@ -63,7 +63,11 @@ s.replace "the usual suspects"
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
-
+s = "the usual"
+s.replace "122"
 
 # "How many times does the letter 'a' appear in this string?".<???>
 # => 4
+
+a = "How many times does the letter 'a' appear in this string?"
+a.count "a"
