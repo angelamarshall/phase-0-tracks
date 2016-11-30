@@ -12,15 +12,14 @@ def calculator(n, s, i)
   end
 end
 
-
 #calculator(4, '+', 5)
+
 calc_stored = []
 
 puts "What calculation would you like to perform?"
 
 loop do
 user_input = gets.chomp
-#  until user_input == "done"
   input_separated = user_input.split
   n = input_separated[0].to_i
   s = input_separated[1].to_s
@@ -28,12 +27,13 @@ user_input = gets.chomp
   answer = calculator(n,s,i)
   puts answer
   break if user_input == "done"
-#  break
-#  end
   calc_stored << {user_input: user_input, answer: answer}
-#end
 end 
 puts "Calculations performed:"
 calc_stored.each {|n| puts "#{n[:user_input]} = #{n[:answer]}"}
 
 p calc_stored
+
+#not sure why the info is showing up double? 
+# tried to fix the issue of needing a space between the valies in the user input... tried split('') but then it didnt work with spaces between the values
+
