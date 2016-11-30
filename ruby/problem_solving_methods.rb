@@ -29,9 +29,16 @@ end
 p fib(100)
 
 
-#using the bubble sort method
-	#
+#BUBBLE SORT 
+	#sorts a collection by moving from left to right
+	#compares a value with the next to determine which is higher or lower
+	#uses a variable called swapped and it is true if any swaps are made in the pass through the list
+	#once the swapped returns false the sorted list is returned 
+  
+  #Visualizations and numerous articles helped with understanding this concept
+  #I felt a little confused when first looking over this algorithm but that's normal for me with any of this material lately
 
+#This method takes the values in a given array and sorts through them, swapping the numbers with others that are higher so the list returns in order from lowest to highest
 def bubble_sort(array)
   n = array.length
   loop do
