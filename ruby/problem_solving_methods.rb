@@ -1,14 +1,15 @@
-#def search_array(letter)
-#	a.each_index {|x| print x, " " }
-#end
+def search_array(arr, int)
+i = 0
+  while i < arr.length
+    if arr[i] == int
+    return i
+    end
+    i += 1
+  end
+end
 
-#search_array("a")
-#a = ["a", "b", "c"]
-#
-#def search_array
-#	a.each_index do |i|
-#		puts i 
-#	end
-#end
+odd = [5, 15, 30, 350, 55, 105]
+even = [4, 20, 46, 80]
+nothing = []
 
-#search_array a["a"]
+p search_array(odd, 55)
