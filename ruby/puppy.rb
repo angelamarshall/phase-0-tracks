@@ -15,3 +15,6 @@
 #Love
 #Play
 
+class Puppy 
+end
+
