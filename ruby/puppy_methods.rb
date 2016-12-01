@@ -32,3 +32,25 @@ max.speak(2)
 max.roll_over
 max.dog_years(3)
 max.sit
+
+
+
+
+class Cat 
+	def initialize
+		puts "Initializing new cat instance..."
+	end
+
+	def pur
+		puts "Purrrrrrrrrr"
+	end
+
+	def cat_years(age)
+		puts age * 9
+	end
+end
+
+kiki = Cat.new
+kiki.pur
+kiki.cat_years(8)
+
