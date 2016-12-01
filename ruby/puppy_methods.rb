@@ -11,6 +11,14 @@ class Puppy
 	def roll_over
 		puts "*rolls over*"
 	end
+
+	def dog_years(age)
+		puts age * 7
+	end 
+
+	def sit 
+		puts "*sits*"
+	end
 end
 
 
@@ -18,3 +26,5 @@ max = Puppy.new
 max.fetch("ball")
 max.speak(2)
 max.roll_over
+max.dog_years(3)
+max.sit
