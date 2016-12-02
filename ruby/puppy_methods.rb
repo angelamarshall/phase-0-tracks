@@ -51,6 +51,17 @@ class Cat
 end
 
 kiki = Cat.new
-kiki.pur
-kiki.cat_years(8)
+#kiki.pur
+#kiki.cat_years(8)
+
+felines = []
+50.times do 
+	felines << Cat.new
+end
+
+felines.each do |c| 
+  c.pur 
+  c.cat_years(8)
+end
+
 
