@@ -1,0 +1,26 @@
+
+create a class for the guessing game
+
+	first user inputs a word
+	steps: initialize the word and set certain parameters needed
+	outcome: sets guesses to the word’s length and ensures that all letters are 		downcase
+
+	method to capture, measure and respond to the second users guesses 
+	steps: 
+	*ensure the length of guesses does not exceed the word length
+	*celebrate when full word is guessed correctly, taunt when full word is guessed 	incorrectly
+	*a statement to respond positively if the user guesses a correct letter, and 		negatively if not. 
+	outcome: second user input will be responded to with a string stating the outcome 	of their plays
+	
+	method to keep a correct guessed letter
+	steps: take the second users answer go through the first users word to see if it 	matches any to keep 
+	outcome: will keep the correct letter guessed
+
+	method to define when the second user has finished the game 
+	steps: if the progress is equal to the answer the game is finished
+	outcome: will link to another method in order to celebrate or not
+
+	method to celebrate
+	steps: write and encouraging string to the user
+	outcome: if the second user won the game they will receive the string
+		
