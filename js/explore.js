@@ -11,10 +11,10 @@ function reverse(str) {
     return new_string;
 }
  
-reverse('hello');
+reverse("hello");
 
 if (1 == 1) {
-	console.log(reverse('hello'));
-} else {
-	console.log('hello');
+	console.log(reverse("hello"));
+} else 
+	console.log("hello");
 }
