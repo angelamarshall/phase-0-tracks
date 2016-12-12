@@ -18,6 +18,29 @@ function sharedValue(one, two){
    return false;
 }
 
+// Release 2
+/* Method:
+Input:
+Steps:
+Output:     */
+
+function makeID(arrLength) {
+	var arr = [];
+	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+   	for (var i = 0; i < arrLength; i++) {
+	   	var word = "";
+	
+		for( var a=1; a <= 10; a++ ) {
+      word += possible.charAt((Math.random() * possible.length * 2)); }
+		
+			for (var letter = 0; letter < Math.random(10); letter++); {
+			word += "";
+			}
+		arr.push(word);
+	}
+	return arr;
+}
+
 // TESTING:
 // Release 0
 phrase_length = ["long phrase","longest phrase","longer phrase"]
@@ -33,3 +56,11 @@ var first = {name: "Angela", age: 22, height: "5ft 2inches"};
 var second = {name: "Jordan", age: 22, height: "5ft 9inches"};
 
 sharedValue(first, second)
+
+// Release 2
+for (var i = 0; i <= 0; i++) {
+	var numOfVariables = makeID(10);
+	console.log(numOfVariables);
+	console.log("Here is the longest word in the array:");
+	console.log(findLongestWord(numOfVariables));
+}
