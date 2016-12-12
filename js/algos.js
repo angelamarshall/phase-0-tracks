@@ -1,14 +1,19 @@
-// Sort the elements in the array from longest to shortest string length
-// Return the length of the first element in the array since that should be the longest
-
 // FUNCTIONS:
 // Release 0
+/* Method: find the longest word in an array
+Input: an array 
+Steps: sort the elements in the array from longest to shortest string length
+Output: return the first string in the array since that will be the longest */
 function findLongestWord(arr) {
   var longestWord = arr.sort(function(a, b) { return b.length - a.length; });
   return longestWord[0];
 }
 
 // Release 1
+/* Method: indicate whether or not a value is shared between 2 hashes
+Input: 2 hashes
+Steps: determine if at least one word matches in each hash
+Output: return true if one word matches and false if none do */
 function sharedValue(one, two){
    for (var i in one) {
            if (one[i] === two[i] ) {
@@ -19,11 +24,10 @@ function sharedValue(one, two){
 }
 
 // Release 2
-/* Method:
-Input:
-Steps:
-Output:     */
-
+/* Method: generate random test data
+Input: integer indicating how many variables you would like in your array
+Steps: set number of variables to equal the integer inputted, jumble up the possible letters and make sure they cap at 10
+Output: an array of stings with jumbled letters */
 function makeID(arrLength) {
 	var arr = [];
 	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -31,15 +35,13 @@ function makeID(arrLength) {
 	   	var word = "";
 	
 		for( var a=1; a <= 10; a++ ) {
-      word += possible.charAt((Math.random() * possible.length * 2)); }
+        word += possible.charAt((Math.random() * possible.length * 2)); }
 		
-			for (var letter = 0; letter < Math.random(10); letter++); {
-			word += "";
-			}
 		arr.push(word);
 	}
 	return arr;
 }
+
 
 // TESTING:
 // Release 0
