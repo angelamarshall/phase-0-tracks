@@ -35,8 +35,8 @@ function makeID(arrLength) {
 	   	var word = "";
 	
 		for( var a=1; a <= 10; a++ ) {
-        word += possible.charAt((Math.random() * possible.length * 2)); }
-		
+        word += possible.charAt((Math.random() * possible.length * 2)); 
+    	}
 		arr.push(word);
 	}
 	return arr;
