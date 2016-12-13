@@ -1,0 +1,36 @@
+1. SELECT * FROM clients;
+2. UPDATE clients SET age=24 WHERE name=“Lindsey Sweat”;
+3. SELECT * FROM clients, classes WHERE clients.class_id = classes.id;
+4. SELECT clients.name, classes.name FROM clients JOIN classes ON clients.class_id = classes.id;
+5. DELETE FROM clients WHERE name = "Halie Chambers";
+
+
+JOINS:
+    COMMAND:
+	SELECT clients.name, classes.name, classes.level
+	FROM classes
+	INNER JOIN clients
+	ON classes.id=clients.class_id;
+    OUTPUT:
+	Angela Marshall|Power Flow|Advanced
+	Kendall Borel|Hot 26|Beginner
+	Brigitte Wanner|Power Flow|Advanced
+	Lindsey Sweat|Buti Yoga|Intermediate
+	Taylor West|Power Flow|Advanced
+	Brielle Sebold|Hot 26|Beginner
+
+    COMMAND:
+	SELECT name, age, paid, class_id
+	FROM clients
+	FULL JOIN classes
+	on clients.class_id = classes.id;
+    OUTPUT:
+	Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+    COMMAND:
+	SELECT clients.name, age, paid, class_id
+  	FROM clients JOIN classes
+  	ON clients.class_id = classes.id
+ 	WHERE classes.id = 2;
+    OUTPUT:
+	Lindsey Sweat|24|false|2
