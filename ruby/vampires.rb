@@ -1,3 +1,34 @@
+puts "What is your name?"
+name = gets.chomp
+puts "How old are you?"
+age = gets.chomp
+puts "What year were you born?"
+year = gets.chomp
+puts "Our company cafeteria serves garlic bread. Should we order some for you?"
+order_bread = gets[0] == "y"
+puts "Would you like to enroll in the company’s health insurance?"
+insurance = gets[0] == "y"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 puts "How many employees will be processed?"
 employees = gets.chomp.to_i
 
