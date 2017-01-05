@@ -4,14 +4,36 @@ puts "How old are you?"
 age = gets.chomp
 puts "What year were you born?"
 year = gets.chomp
+now = Time.now.year
+correct_year = now - year
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 order_bread = gets[0] == "y"
 puts "Would you like to enroll in the company’s health insurance?"
 insurance = gets[0] == "y"
 
+if (age == correct_year) && ((order_bread == "y") || (insurance == "y"))
+  result = "Probably not a vampire."
+else
+  result = "Results inconclusive."
+end
 
+if (age != correct_year) && ((order_bread != "y") || (insurance != "y"))
+  result = "Probably a vampire."
+else
+  result = "Results inconclusive."
+end
 
+if (age != correct_year) && (order_bread != "y") && (insurance != "y")
+  result = "Almost certainly a vampire."
+else
+  result = "Results inconclusive."
+end
 
+if name == "Drake Cula" || name == "Tu Fang"
+  result = "Definitely a vampire."
+else
+  result = "Results inconclusive."
+end 
 
 
 
