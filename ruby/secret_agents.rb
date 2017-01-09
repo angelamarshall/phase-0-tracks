@@ -1,3 +1,52 @@
+# Encryption Method: 
+def encrypt(string)
+  string.length
+  index = 0
+  new_string = ""
+  while index < string.length
+    new_string += string[index].next
+    index += 1
+  end
+  puts new_string
+end
+
+encrypt("abc")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
+This is my old work before the repeat:
+
 def encrypt (string)
  string_length = string.length
  index = 0
@@ -47,4 +96,4 @@ password = gets.chomp
 		puts encrypt(password)
 	end
 
-
+=end
