@@ -16,6 +16,20 @@ end
 
 encrypt("zab")
 
+def decrypt(string)
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  string.length
+  index = 0
+  new_string = ""
+  while index < string.length 
+    i = alphabet.index(string[index])
+    new_string += alphabet[i-1]
+    index += 1
+  end
+  puts new_string
+end
+
+decrypt ("abc")
 
 
 
