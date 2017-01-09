@@ -6,7 +6,6 @@
 
 # "iNvEsTiGaTiOn".<???>
 # => “InVeStIgAtIoN”
-
 "iNvEsTiGaTiOn".swapcase
 
 # "zom".<???>
