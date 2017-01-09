@@ -14,7 +14,7 @@ def encrypt(string)
   puts new_string
 end
 
-encrypt("zab")
+# encrypt("zab")
 
 def decrypt(string)
   alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -29,10 +29,26 @@ def decrypt(string)
   puts new_string
 end
 
-decrypt ("abc")
+# decrypt ("abc")
+
+# decrypt(encrypt("swordfish"))
+# This works and reverses the first command ^^
+
+puts "Would you like to decrypt or encrypt a password?"
+answer = gets.chomp
+puts "What is your password?"
+password = gets.chomp
+
+if answer == "decrypt"
+  puts decrypt(password)
+elsif answer == "encrypt"
+  puts encrypt(password)
+else
+  puts "Something went wrong. Try again."
+end
 
 
-
+  
 
 
 
