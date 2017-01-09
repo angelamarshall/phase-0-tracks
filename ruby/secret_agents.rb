@@ -4,13 +4,17 @@ def encrypt(string)
   index = 0
   new_string = ""
   while index < string.length
-    new_string += string[index].next
+    if string[index] == "z"
+      new_string += "a"
+    else
+      new_string += string[index].next
+    end
     index += 1
   end
   puts new_string
 end
 
-encrypt("abc")
+encrypt("zab")
 
 
 
