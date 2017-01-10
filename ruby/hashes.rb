@@ -1,3 +1,67 @@
+#Pseudocode client details program
+#Ask for the clients name, age, number of children, and decor theme
+#Set up a hash for client details
+#Treat the clients name, age, number of children, and decor theme as keys
+#Treat their answers as values
+
+puts "Hello there! What is the client's name?"
+client_name = gets.chomp
+
+puts "What is #{client_name}'s age?"
+client_age = gets.chomp.to_i
+
+puts "What is #{client_name}'s number of children?"
+number_of_children = gets.chomp.to_i
+
+puts "What is #{client_name}'s preferred decor theme?"
+decor_theme = gets.chomp
+
+client_details = {
+  name: client_name,
+  age: client_age,
+  children: number_of_children,
+  decor: decor_theme
+}
+
+puts "Here are the client details you have inputted:"
+p client_details
+
+puts "Would you like to update any of this information? (yes/no)"
+answer = gets.chomp
+if answer == "yes"
+  puts "Which section?"
+  section = gets.chomp
+  puts "What would you like to change it to?"
+  change = gets.chomp
+  client_details[section] = change
+  puts "Your new information has been recorded!"
+  p client_details
+else 
+  puts "Great! Your client's details have been saved."
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
 puts "Client Information"
 puts "Please fill out the following fields when prompted."
 
@@ -47,7 +111,7 @@ if client_answer == "yes"
 else
   puts "Ok - all your information has been recorded!"
 end
-
+=end
 
 
 
