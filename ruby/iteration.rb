@@ -5,11 +5,26 @@ end
 
 say_goodbye { |name| puts "Nice seeing you #{name}! Bye." }
 
+#array:
+greetings = ["hello", "hi", "hola", "howdy", "hey"]
 
+#hash:
+goodbyes = {
+  american: "bye",
+  spanish: "adios",
+  french: "au revior",
+  portuguese: "Tchau"
+}
 
+#using each and map! with both arrays and hashes
 
+greetings.each do |greeting|
+  puts "#{greeting}, it's so nice to see you!" 
+end
 
-
+goodbyes.each do |language, goodbye|
+  puts "The #{language} language says #{goodbye} as their goodbye."
+end
 
 
 
