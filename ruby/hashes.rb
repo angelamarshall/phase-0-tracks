@@ -33,7 +33,12 @@ if answer == "yes"
   section = gets.chomp
   puts "What would you like to change it to?"
   change = gets.chomp
-  client_details[section] = change
+#  client_details[section.to_sym] = change
+    if section == "age" || "children"
+      client_details[section.to_sym] = change.to_i
+    else
+      client_details[section.to_sym] = change
+    end
   puts "Your new information has been recorded!"
   p client_details
 else 
