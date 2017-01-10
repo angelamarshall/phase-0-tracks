@@ -1,3 +1,40 @@
+def say_goodbye
+  puts "See ya later!"
+  yield("Tim")
+end
+
+say_goodbye { |name| puts "Nice seeing you #{name}! Bye." }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
 def test_5_3 
   name1 = "RJ"
   name2 = "Angela"
@@ -80,3 +117,4 @@ car_hash1.delete_if{|_,val| val == "sc400"}
 
 puts "print what's left in hash"
 puts car_hash1
+=end
