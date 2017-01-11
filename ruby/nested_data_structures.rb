@@ -1,3 +1,83 @@
+highway = {
+	sedan: [
+		'Lisa', 
+		'Dan', 
+		'Jack'
+		],
+	truck: [
+		'Steve', 
+		'Sally'
+		],
+	van: [
+		'Margaret', 
+		'David', 
+		'Eva', 
+		'Theo'
+		],
+	hybrid: [
+		'Chris',
+		'Carmen'
+		],
+	coupe: [
+		'Jordan', 
+		'Angela'
+	]
+}
+
+p highway
+
+puts "There are two families passing one another on the highway. 
+Each family is taking their child to soccer practice. One family is in a 
+sedan and the other is in a van. Both of them drop off their little boys (Jack and Theo) and 
+now no longer have them in the car."
+
+highway[:sedan].delete_at(2)
+highway[:van].delete_at(3)
+
+p highway
+
+puts "After soccer practice the family in the van said they would pick up the other family's 
+little boy Theo. They now have Jack and Theo in their car."
+
+highway[:van].push('Jack', 'Theo')
+
+p highway 
+
+puts "In another scenerio on the highway, Jordan gets tired of driving so Angela switches with him."
+
+highway[:coupe].reverse
+
+p highway
+
+puts "Carmen and Chris got in a huge fight while driving. Carmen wanted to get out of the
+car and Chris went ahead and picked up his side chick instead."
+
+highway[:hybrid][1] = 'Candice'
+
+p highway
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
+
+This is my old code before the repeat:
+
 classroom = {
 	teacher_desk: [
 		'stapler',
@@ -30,3 +110,5 @@ classroom[:bad_student_desk].push('phone')
 p classroom
 
 puts "That looks about right."
+
+=end
