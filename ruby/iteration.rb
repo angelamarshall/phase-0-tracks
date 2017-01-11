@@ -61,19 +61,23 @@ p number_description
 numbers.keep_if {|number| number < 4}
 p numbers
 
+number_description.keep_if {|key, value| key < 4}
+p number_description
 
 #A different method that filters a data structure for only items satisfying a certain 
 #condition -- Ruby offers several options!
 numbers.select! { |num| num.odd? }
 p numbers 
 
+number_description.select! {|k,v| k.even?}
+p number_description
 
 #A method that will remove items from a data structure until the condition in the block 
 #evaluates to false, then stops (you may not find a perfectly working option for the hash, 
 #and that's okay).
 p numbers.empty?
 
-
+p number_description.key("two").equal? 1
 
 
 
@@ -95,6 +99,9 @@ p numbers.empty?
 
 
 =begin
+#Old work before the repeat: 
+
+
 def test_5_3 
   name1 = "RJ"
   name2 = "Angela"
