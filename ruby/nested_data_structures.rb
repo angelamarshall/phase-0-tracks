@@ -1,3 +1,65 @@
+highway = {
+	sedan: [
+		'Lisa', 
+		'Dan', 
+		'Jack'
+		],
+	truck: [
+		'Steve', 
+		'Sally'
+		],
+	van: [
+		'Margaret', 
+		'David', 
+		'Eva', 
+		'Theo'
+		],
+	hybrid: [
+		'Chris', '
+		Carmen'
+		],
+	coupe: [
+		'Jordan', 
+		'Angela'
+	]
+}
+
+p highway
+
+puts "There are two families passing one another on the highway. 
+Each family is taking their child to soccer practice. One family is in a 
+sedan and the other is in a van. Both of them drop off their little boys and 
+now no longer have them in the car."
+
+highway[sedan][2].delete
+highway[van][3].delete
+
+p highway
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
+
+This is my old code before the repeat:
+
 classroom = {
 	teacher_desk: [
 		'stapler',
@@ -30,3 +92,5 @@ classroom[:bad_student_desk].push('phone')
 p classroom
 
 puts "That looks about right."
+
+=end
