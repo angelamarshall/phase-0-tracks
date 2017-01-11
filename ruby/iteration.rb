@@ -13,7 +13,7 @@ goodbyes = {
   american: "bye",
   spanish: "adios",
   french: "au revior",
-  portuguese: "Tchau"
+  portuguese: "tchau"
 }
 
 #using each and map! with both arrays and hashes
@@ -21,10 +21,18 @@ goodbyes = {
 greetings.each do |greeting|
   puts "#{greeting}, it's so nice to see you!" 
 end
+p greetings
+
+greetings.map! do |greeting|
+  puts greeting
+  greeting[0..1]
+end
+p greetings
 
 goodbyes.each do |language, goodbye|
   puts "The #{language} language says #{goodbye} as their goodbye."
 end
+p goodbyes
 
 
 
