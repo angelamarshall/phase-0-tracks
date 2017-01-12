@@ -1,3 +1,45 @@
+# writing a method that will create a fake name
+
+# Ask for first and last name
+puts "What is your first and last name?"
+name = gets.chomp
+
+# Turn first and last name into variables of an array
+first_last = name.split(' ')
+
+#p first_last
+
+# Swap the first and last name
+last_first = first_last.reverse
+
+#p last_first
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
+
+# This is old work before my repeat!
+
+
 # a method to flip and jumble up the first and last name
 
 def alias_maker(full_name)
@@ -36,3 +78,4 @@ puts "Type in a real name to recieve an alias immediately after. When you are fi
 #p alias_stored
 
 alias_stored.each {|n| puts "#{n[:real_name]} is now going by #{n[:fake_name]}"}
+=end
