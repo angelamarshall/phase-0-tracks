@@ -1,12 +1,16 @@
 # writing a method that will create a fake/alias name
 def alias_name(first_last)
+	# ensure all letters of the name are lower case
 	og_name = first_last.downcase
+	# split the name and reverse it, joinging it back to a string afterward
 	new_name = og_name.split(' ').reverse.join(' ')
+	# shift all vowels over to the next vowel by replacing them
 	new_name.tr!('aeiou', 'eioua')
+	# shift all consonants over to the next consonant by replacing them
 	new_name.tr!('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
 end
 
-alias_name('Angela Marshall')
+p alias_name('Angela Marshall')
 
 
 
