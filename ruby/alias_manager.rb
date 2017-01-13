@@ -17,14 +17,31 @@ def alias_name(first_last)
 	alias_n.join(' ')
 end
 
-p alias_name('Felicia Torres')
+# p alias_name('Felicia Torres')
 
 
+# user interface that allows user to enter their name and get a fake one back
+real_vs_fake = Array.new
 
+loop do
+	puts 'What is the real full name? (type "quit" if you are done)'
+	full_name = gets.chomp
+		if full_name == 'quit'
+			break
+		else
+			puts 'Here is the alias:'
+			puts alias_name(full_name)
+		end
+	# Adding a storing method:
+	real_vs_fake << {real_names: full_name, fake_names: alias_name(full_name)}
+end
 
+# p real_vs_fake
 
-
-
+# sorting through each item in the array/hash to compare the real names and fake names
+real_vs_fake.each do |n|
+	puts "#{n[:real_names]} will now go by #{n[:fake_names]}."
+end
 
 
 
