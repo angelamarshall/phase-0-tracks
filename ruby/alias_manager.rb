@@ -8,9 +8,16 @@ def alias_name(first_last)
 	new_name.tr!('aeiou', 'eioua')
 	# shift all consonants over to the next consonant by replacing them
 	new_name.tr!('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
+	# split the new name into two items
+	alias_n = new_name.split(' ')
+	# loop through each item in the array and capitalize the first letter of each 
+	alias_n.each do |name|
+		name.capitalize!
+	end
+	alias_n.join(' ')
 end
 
-p alias_name('Angela Marshall')
+p alias_name('Felicia Torres')
 
 
 
