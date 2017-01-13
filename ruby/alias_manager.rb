@@ -1,19 +1,12 @@
-# writing a method that will create a fake name
+# writing a method that will create a fake/alias name
+def alias_name(first_last)
+	og_name = first_last.downcase
+	new_name = og_name.split(' ').reverse.join(' ')
+	new_name.tr!('aeiou', 'eioua')
+	new_name.tr!('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
+end
 
-# Ask for first and last name
-puts "What is your first and last name?"
-name = gets.chomp
-
-# Turn first and last name into variables of an array
-first_last = name.split(' ')
-
-#p first_last
-
-# Swap the first and last name
-last_first = first_last.reverse
-
-#p last_first
-
+alias_name('Angela Marshall')
 
 
 
