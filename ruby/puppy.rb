@@ -1,14 +1,14 @@
-#SPECIES ------------
+#SPECIES -----------
 #Golden Retriever
 
-#CHARACTERISTICS ----
+#CHARACTERISTICS ---
 #Color: blonde
 #Friendly: varies
 #Smart: yes
 #Name: varies
 #Fur Length: varies
 
-#BEHAVIOR -----------
+#BEHAVIOR ----------
 #Run
 #Lick
 #Beg
