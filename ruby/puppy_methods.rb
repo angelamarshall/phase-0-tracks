@@ -51,6 +51,10 @@ Andy = Human.new
 Andy.talk(5)
 Andy.run
 
+50.times do
+	Human.new
+end
+
 
 
 
