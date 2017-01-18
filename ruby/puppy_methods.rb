@@ -1,4 +1,65 @@
 class Puppy
+  def fetch(toy)
+    puts "I brought back the #{toy}!"
+    toy
+  end
+
+  def speak(i)
+  	puts "Woof! " * i 
+  end
+
+  def roll_over
+  	puts "*rolls over*"
+  end
+
+  def dog_years(i)
+  	puts i * 7
+  end
+
+  def high_five
+  	puts "*high fives*"
+  end
+end
+
+Fred = Puppy.new
+Fred.fetch("ball")
+Fred.speak(2)
+Fred.roll_over
+Fred.dog_years(3)
+Fred.high_five
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
+
+class Puppy
 	def fetch(toy)
 		puts "I brought back the #{toy}!"
 		toy
@@ -64,4 +125,4 @@ felines.each do |c|
   c.cat_years(8)
 end
 
-
+=end
