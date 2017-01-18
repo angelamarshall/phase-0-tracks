@@ -14,11 +14,16 @@ class Santa
 	end
 end
 
-santa_clause = Santa.new
-santa_clause.speak
-santa_clause.eat_milk_and_cookies("chocolate chip cookie")
+#santa_clause = Santa.new
+#santa_clause.speak
+#santa_clause.eat_milk_and_cookies("chocolate chip cookie")
 
-
+santas = []
+genders = ["female", "male"]
+ethnicities = ["black", "caucasian", "asian", "latino"]
+4.times do |i|
+	santas << Santa.new(genders[i], ethnicities[i])
+end
 
 
 
