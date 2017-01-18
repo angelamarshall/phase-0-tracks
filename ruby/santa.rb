@@ -28,6 +28,10 @@ class Santa
 		@reindeer_ranking.insert(8, @reindeer_ranking.delete_at(reindeer_i))
 		p @reindeer_ranking
 	end
+
+	def random_age
+    @age = rand(0...140)
+  end
 end
 
 santa_clause = Santa.new("male", "white")
@@ -38,12 +42,15 @@ santa_clause.celebrate_birthday
 santa_clause.get_mad_at("Dasher")
 
 
-#santas = []
-#genders = ["female", "male"]
-#ethnicities = ["black", "caucasian", "asian", "latino"]
-#4.times do |i|
-#	santas << Santa.new(genders[i], ethnicities[i])
-#end
+santas = []
+genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+40.times do 
+	santas = Santa.new(genders.sample, ethnicities.sample)
+	santas.random_age
+	p santas
+end
 
 
 
