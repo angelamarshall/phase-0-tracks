@@ -1,67 +1,64 @@
 class Puppy
-	def fetch(toy)
-		puts "I brought back the #{toy}!"
-		toy
-	end
-
-	def speak(i)
-		i.times {puts "Woof!"}
-	end
-
-	def roll_over
-		puts "*rolls over*"
-	end
-
-	def dog_years(age)
-		puts age * 7
-	end 
-
-	def sit 
-		puts "*sits*"
-	end
-
 	def initialize
 		puts "Initializing new puppy instance..."
 	end
+
+  def fetch(toy)
+    puts "I brought back the #{toy}!"
+    toy
+  end
+
+  def speak(i)
+  	puts "Woof! " * i 
+  end
+
+  def roll_over
+  	puts "*rolls over*"
+  end
+
+  def dog_years(i)
+  	puts i * 7
+  end
+
+  def high_five
+  	puts "*high fives*"
+  end
 end
 
-
-max = Puppy.new
-max.fetch("ball")
-max.speak(2)
-max.roll_over
-max.dog_years(3)
-max.sit
-
+Fred = Puppy.new
+Fred.fetch("ball")
+Fred.speak(2)
+Fred.roll_over
+Fred.dog_years(3)
+Fred.high_five
 
 
-
-class Cat 
+class Human
 	def initialize
-		puts "Initializing new cat instance..."
+		puts "Initializing new human instance..."
 	end
 
-	def pur
-		puts "Purrrrrrrrrr"
+	def talk(i)
+		puts "blah " * i
 	end
 
-	def cat_years(age)
-		puts age * 9
+	def run
+		puts "*running*"
 	end
 end
 
-kiki = Cat.new
-#kiki.pur
-#kiki.cat_years(8)
+Andy = Human.new
+Andy.talk(5)
+Andy.run
 
-felines = []
-50.times do 
-	felines << Cat.new
+humans = []
+50.times do
+	humans << Human.new
 end
 
-felines.each do |c| 
-  c.pur 
-  c.cat_years(8)
+humans.each do |human|
+	human.talk(2)
+	human.run
 end
 
 
