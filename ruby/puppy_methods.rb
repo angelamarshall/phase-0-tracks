@@ -51,10 +51,12 @@ Andy = Human.new
 Andy.talk(5)
 Andy.run
 
+humans = []
 50.times do
-	Human.new
+	humans << Human.new
 end
 
+puts humans
 
 
 
