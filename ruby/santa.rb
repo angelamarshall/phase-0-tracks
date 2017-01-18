@@ -1,4 +1,59 @@
 class Santa
+	def initialize
+		puts "Initializing Santa instance ..."
+	end
+	def speak
+		puts "Ho, ho, ho! Haaaappy holidays!"
+	end
+	def eat_milk_and_cookies(cookie)
+		puts "That was a good #{cookie}!"
+	end
+end
+
+santa_clause = Santa.new
+santa_clause.speak
+santa_clause.eat_milk_and_cookies("chocolate chip cookie")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
+class Santa
 	attr_reader :gender, :age, :ethnicity
 	attr_accessor :gender, :age
 
@@ -49,4 +104,4 @@ ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say"
   p santas
 end
 
-
+=end
