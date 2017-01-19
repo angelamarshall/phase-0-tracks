@@ -1,3 +1,27 @@
+class Bird
+end
+
+class Plane
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
 module Flight
   def take_off(altitude)
     puts "Taking off and ascending until reaching #{altitude} ..."
@@ -17,3 +41,5 @@ bird.take_off(800)
 
 plane = Plane.new
 plane.take_off(30000)
+
+=end
