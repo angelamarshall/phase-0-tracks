@@ -29,8 +29,11 @@ class Dad
   include Shout
 end
 
+dana = Mom.new
+puts dana.yell_angrily("Don't order pizza, I just cooked")
 
-
+david = Dad.new
+puts david.yelling_happily("YES! Touch down")
 
 
 
