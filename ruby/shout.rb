@@ -1,3 +1,4 @@
+=begin
 module Shout
   def self.yell_angrily(words)
     words + "!!!" + " :("
@@ -9,7 +10,24 @@ end
 
 puts Shout.yell_angrily("NOOOOO")
 puts Shout.yelling_happily("YAAAAAS")
+=end
 
+module Shout
+  def yell_angrily(words)
+    words + "!!!" + " :("
+  end
+  def yelling_happily(words)
+    words + "!!!" + " :)"
+  end
+end
+
+class Mom
+  include Shout
+end
+
+class Dad
+  include Shout
+end
 
 
 
