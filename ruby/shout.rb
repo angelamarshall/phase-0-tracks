@@ -1,3 +1,37 @@
+module Shout
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
 #module Shout
 #  def self.yell_angrily(words)
 #  words + "!!!" + " :("
@@ -34,3 +68,4 @@ dad.yell_angrily("Damn it, I burnt the burgers")
 
 mom = Mom.new
 mom.yell_happily("Alright everyone - dinner is ready")
+=end
