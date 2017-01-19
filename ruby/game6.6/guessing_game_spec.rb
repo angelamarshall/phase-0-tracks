@@ -1,3 +1,48 @@
+describe GuessingGame do 
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
 require_relative 'guessing_game'
 
 describe GuessingGame do
@@ -29,3 +74,4 @@ describe GuessingGame do
     expect(game.guess("o")).to eq "Your guess was not correct. You have #{@guesses} left."
   end
 end
+=end

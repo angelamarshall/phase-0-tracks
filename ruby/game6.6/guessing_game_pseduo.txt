@@ -1,3 +1,50 @@
+will need an attrreader for the number of guesses and an accessor for the word?
+
+
+
+
+
+
+Create a class for the guessing game (designed for a computer program to use on a human directly)
+
+create a method that determines whether user 2 guessed the same word as user 1
+	- give a congratulatory message if they win and a taunting message if they lose
+	- number of guesses are limited and the number available is related to the length 	of the word
+	- repeated guesses OK
+
+create a method that gives the user 2 feedback about the letters they are guessing 
+
+
+
+
+Driver Code:
+Ask user 1 to enter a word 
+
+Ask user 2 to guess user 1’s word
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 create a class for the guessing game
 
