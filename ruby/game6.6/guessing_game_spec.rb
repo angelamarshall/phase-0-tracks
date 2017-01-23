@@ -1,77 +1,32 @@
-describe GuessingGame do 
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=begin
 require_relative 'guessing_game'
 
 describe GuessingGame do
-  let(:game) { GuessingGame.new("map")}
+  let(:game) { GuessingGame.new("finger")}
+
+  it "celebrates when user guesses the correct letter" do
+   "".each_char { |letter| game.guess_letters(letter)}
+    expect(game.guess_letters("f")).to eq "Nice! That was a correct guess. You have 6 guesses left. Your progress so far is f_____."
+  end
+
+  it "tells the user if they do not guess the correct letter" do
+    "".each_char { |letter| game.guess_letters(letter)}
+    expect(game.guess_letters("a")).to eq "Your guess was not correct. You have 6 left."
+  end
+
+  it "lets user know if they have won the game" do
+    "finger".each_char { |letter| game.guess_letters(letter)}
+    expect(game.correct_guess).to eq "Congrats! You won!!!!!"
+  end
+
+  it "keeps the correct letter if guessed correctly" do
+    expect(game.keep_correct_letter("i")).to eq "i"
+  end
 
   it "celebrates if the user wins" do
-    "ma".each_char { |letter| game.guess(letter)}
-    expect(game.guess("p")).to eq "Woah! You got it right. Nice work!"
+    expect(game.celebrate).to eq "Congrats! You won!!!!!"
   end
 
-  it "celebrates when the user guesses beyond the correct answer" do
-    "map".each_char {|letter| game.guess(letter)}
-    expect(game.guess("r")).to eq "Woah! You got it right. Nice work!"
-  end
-
-  it "encourages when user guesses correctly" do 
-    "m".each_char { |letter| game.guess(letter)}
-    expect(game.guess("a")).to eq "Good job! That was a correct guess. You progress is: #{@progress}. You have #{@guesses} guesses left."
-  end
-
-  it "lets user know when they lose the game" do
-    "ma".each_char {|letter| game.guess(letter)}
-    #guesses <= 0
-    expect(game.guess("i")).to eq "You lose!"
-  end
-
-  it "lets user know when their guess is not correct" do
-    "".each_char {|letter| game.guess(letter)}
-    expect(game.guess("o")).to eq "Your guess was not correct. You have #{@guesses} left."
+  it "taunts if the user loses" do
+    expect(game.taunt).to eq "YOU LOSE!"
   end
 end
-=end

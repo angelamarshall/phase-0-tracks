@@ -1,10 +1,3 @@
-will need an attrreader for the number of guesses and an accessor for the word?
-
-
-
-
-
-
 Create a class for the guessing game (designed for a computer program to use on a human directly)
 
 create a method that determines whether user 2 guessed the same word as user 1
