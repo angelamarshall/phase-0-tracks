@@ -1,53 +1,72 @@
 class GuessingGame
-  # attr_reader :progress :guesses
+  attr_reader :guesses, :progress
 
   def initialize(word)
-    @progress = "_" * word.length
     @guesses = word.length
-    @_answer = word.downcase
+    @answer = word.downcase
+    @progress = "_" * word.length
   end
-
-  def guess(guessing_input)
-    if @guesses < 1
-      if finished?
-        celebrate
+ 
+  def guess_letters(letter)
+    until @guesses == -1  
+      if @answer.include?(letter)
+        keep_correct_letter(letter)
+         if finished?
+            celebrate
+         else
+           if @guesses == 0 
+            return "Nice! That was a correct guess. You have #{@guesses} guesses left. You guessed #{@progress}, but the answer was #{@answer}."
+            else
+            return "Nice! That was a correct guess. You have #{@guesses} guesses left. Your progress so far is #{@progress}."
+            letter = gets.chomp
+            end
+         end
       else
-        p "You loose!"
-      end
-    else
-      @guesses -= 1
-
-      guessing_input = guessing_input[0]
-      guessing_input.downcase!
-
-      if @_answer.include?(guessing_input)
-        keep_correct_letter(guessing_input)
-        if finished?
-          celebrate
+        if @guesses == 0 
+          return "Your guess was not correct. You have #{@guesses} guesses left. The answer was #{@answer}."
         else
-          puts "Good job! That was a correct guess. You progress is: #{@progress}. You have #{@guesses} guesses left."
+          return "Your guess was not correct. You have #{@guesses} left."
+          letter = gets.chomp
         end
-      else
-        puts "Your guess was not correct. You have #{@guesses} left."
       end
+    @guesses -= 1 
     end
   end
-
-  private
-
-  def keep_correct_letter(guessing_input)
-    guessing_input_index = @_answer.index(guessing_input)
- #		while @_answer.include?(guessing_input)
-    @progress[guessing_input_index] = guessing_input
+  
+def correct_guess
+    if finished?
+      celebrate
+    else
+      taunt
+    end
+end
+ 
+  def keep_correct_letter(input)
+    input_index = @answer.index(input)
+    @progress[input_index] = input
   end
-
+    
   def finished?
-    @progress == @_answer
-  end
+    @answer == @progress 
+  end 
 
   def celebrate
-    p "Woah! You got it right. Nice work!"
+    "Congrats! You won!!!!!"
+  end
+
+  def taunt
+    "YOU LOSE!"
   end
 end
 
-game = GuessingGame.new("Map")
+#puts "Welcome to the Guessing Game!"
+
+#puts "Hello user 1, what is your word?"
+#word = gets.chomp
+#game = GuessingGame.new(word)
+
+#puts "Hello user 2, what is your letter guess?"
+#user_2_guess = gets.chomp
+
+#game.guess_letters(user_2_guess)
+#game.correct_guess
