@@ -1,19 +1,38 @@
 Create a class for the guessing game (designed for a computer program to use on a human directly)
-
-create a method that determines whether user 2 guessed the same word as user 1
-	- give a congratulatory message if they win and a taunting message if they lose
-	- number of guesses are limited and the number available is related to the length 	of the word
-	- repeated guesses OK
+make the guesses and progress readable but not accessible 
 
 create a method that gives the user 2 feedback about the letters they are guessing 
+	- if they guess the wrong letter let them know that they guessed incorrectly and 	tell them how many guesses they have left and what their progress is
+	- if they guess the right letter let them know that they guessed correctly and 		tell them how many guesses they have left and what their progress is
+
+
+create a method that responds to whether or not user 2 guessed the same word as user 1
+	- give a congratulatory message if they win and a taunting message if they lose
+
+
+create a method that keeps the correct letters guessed
+	- add each correct letter to the progress 
+
+create a method that determines if the game is finished
+	- game is finished if user 2 guesses user 1’s word
+
+create a method to celebrate
+
+create a method to taunt 
 
 
 
 
 Driver Code:
+Welcome the user to the guessing game
+
 Ask user 1 to enter a word 
 
-Ask user 2 to guess user 1’s word
+Ask user 2 to guess a letter (keep asking to the point of the length of user 1’s word)
+
+Celebrate user 2 if they get the word right, taunt them if not.
+
+
 
 
 
