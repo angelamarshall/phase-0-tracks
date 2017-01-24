@@ -17,30 +17,41 @@ class VirusPredictor
     @population_density = population_density
   end
 #calls previous two methods within this method
+  
   def virus_effects
     predicted_deaths
     speed_of_spread
   end
 
-  private
+ private
 #predicts the number of deaths based on population density and population per state
   def predicted_deaths
     # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
+    factor = case @population_density
+    when 0...50 then 0.05
+    when 50...100 then 0.1
+    when 100...150 then 0.2
+    when 150...200 then 0.3
+    else 0.4
     end
+    number_of_deaths = (@population * factor).floor
+  print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+end
 
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+ #   if @population_density >= 200
+ #     number_of_deaths = (@population * 0.4).floor
+ #   elsif @population_density >= 150
+ #     number_of_deaths = (@population * 0.3).floor
+ #   elsif @population_density >= 100
+  #    number_of_deaths = (@population * 0.2).floor
+  #  elsif @population_density >= 50
+ #     number_of_deaths = (@population * 0.1).floor
+  #  else
+  #    number_of_deaths = (@population * 0.05).floor
+  #  end
+  #  print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+ # end
 
-  end
 #based on the population density this method determines speed of virus spread
   def speed_of_spread
     #in months
@@ -48,6 +59,16 @@ class VirusPredictor
     # by additional factors we haven't added into this functionality.
     speed = 0.0
 
+  factor = case @population_density
+      when 0...50 then speed += 2.5
+      when 50...100 then speed += 2
+      when 100...150 then speed += 1.5
+      when 150...200 then speed += 1
+      else speed += 0.5
+      end
+
+  puts " and will spread across the state in #{speed} months.\n\n"
+=begin
     if @population_density >= 200
       speed += 0.5
     elsif @population_density >= 150
@@ -61,7 +82,7 @@ class VirusPredictor
     end
 
     puts " and will spread across the state in #{speed} months.\n\n"
-
+=end
   end
 
 end
@@ -80,3 +101,12 @@ end
 
 #=======================================================================
 # Reflection Section
+
+#What are the differences between the two different hash syntaxes shown in the state_data file?
+
+
+#What does require_relative do? How is it different from require?
+#What are some ways to iterate through a hash?
+#When refactoring virus_effects, what stood out to you about the variables, if anything?
+#What concept did you most solidify in this challenge?
+
