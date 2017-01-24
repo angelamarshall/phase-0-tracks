@@ -103,10 +103,20 @@ end
 # Reflection Section
 
 #What are the differences between the two different hash syntaxes shown in the state_data file?
-
+#They are displayed differently. One uses a colon and the other uses an arrow. Also, the state's
+#keys are strings but the others are symbols.
 
 #What does require_relative do? How is it different from require?
+#Require relative allows a program to access data within the same folder structure. 
+#Require allows you to bring in gems and libraries.
+
 #What are some ways to iterate through a hash?
+#You can use .each or .map...
+
 #When refactoring virus_effects, what stood out to you about the variables, if anything?
+#Since we already initialized the variables we didn't need to repeat ourselves by providing
+#them again.
+
 #What concept did you most solidify in this challenge?
+#Working with hashes inside hashes. 
 
