@@ -14,7 +14,5 @@ function reverse(str) {
 reverse("hello");
 
 if (1 == 1) {
-	console.log(reverse("hello"));
-} else 
-	console.log("hello");
+  console.log(reverse("hello"));
 }
