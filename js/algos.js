@@ -16,9 +16,9 @@ Steps: determine if at least one word matches in each hash
 Output: return true if one word matches and false if none do */
 function sharedValue(one, two){
    for (var i in one) {
-           if (one[i] === two[i] ) {
-              return true;
-           }       
+      if (one[i] === two[i] ) {
+        return true;
+      }       
    }
    return false;
 }
@@ -34,7 +34,7 @@ function makeID(arrLength) {
    	for (var i = 0; i < arrLength; i++) {
 	   	var word = "";
 	
-		for( var a=1; a <= 10; a++ ) {
+		for( var a = 0; a <= 10; a++ ) {
         word += possible.charAt((Math.random() * possible.length * 2)); 
     	}
 		arr.push(word);
@@ -55,7 +55,7 @@ findLongestWord(fruit);
 
 // Release 1
 var first = {name: "Angela", age: 22, height: "5ft 2inches"};
-var second = {name: "Jordan", age: 22, height: "5ft 9inches"};
+var second = {name: "Brigitte", age: 22, height: "5ft 9inches"};
 
 sharedValue(first, second)
 
