@@ -1,8 +1,8 @@
 var colors = ["blue", "green", "red", "orange"];
-var horse_names = ["Black Beauty", "Secrtariat", "Seabiscuit", "My Little Pony"];
+var horse_names = ["Black Beauty", "Secretariat", "Sea Biscuit", "My Little Pony"];
 
 colors.push("purple");
-horse_names.push("Mr. Ed");
+horse_names.push("Mr. Grey");
 
 
 var assignments = {};
