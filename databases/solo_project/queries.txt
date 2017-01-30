@@ -1,5 +1,5 @@
 1. SELECT * FROM clients;
-2. UPDATE clients SET age=24 WHERE name=“Lindsey Sweat”;
+2. UPDATE clients SET age=23 WHERE name=“Kendall Borel”;
 3. SELECT * FROM clients, classes WHERE clients.class_id = classes.id;
 4. SELECT clients.name, classes.name FROM clients JOIN classes ON clients.class_id = classes.id;
 5. DELETE FROM clients WHERE name = "Halie Chambers";
