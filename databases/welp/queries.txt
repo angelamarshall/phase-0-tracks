@@ -1,0 +1,33 @@
+Join 3 tables:
+
+INPUT —
+SELECT businesses.name,
+reviews.stars,
+reviews.comment,
+users.lastname
+FROM reviews
+	JOIN businesses
+	ON reviews.business_id = businesses.id
+	JOIN users
+	ON reviews.user_id = users.id
+WHERE reviews.stars=5;
+
+OUTPUT - 
+Grundy Hollow Wedding Chapel|5|Beautiful venue!|Pitt
+Lotus Yoga|5|Good vibes tho.|Wonder
+
+INPUT —
+SELECT businesses.name,
+reviews.stars,
+reviews.comment,
+users.lastname
+FROM reviews
+	JOIN businesses
+	ON reviews.business_id = businesses.id
+	JOIN users
+	ON reviews.user_id = users.id
+WHERE reviews.stars=1;
+
+OUTPUT - 
+Amir's Towing|1|Rude staff!|Jolie
+JoeBob's Sportz Barn|1|Apparently I dont understand what a sports barn is.|George
