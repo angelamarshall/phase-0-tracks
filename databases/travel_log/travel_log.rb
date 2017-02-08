@@ -9,22 +9,23 @@ require 'faker'
 db = SQLite3::Database.new("travel_notes.db")
 db.results_as_hash = true
 
-create_table_cmd = <<-SQL
+create_table = <<-SQL
   CREATE TABLE IF NOT EXISTS travel_notes(
     id INTEGER PRIMARY KEY,
-    tripdate TIMESTAMP,
+    tripdate DATE,
     location VARCHAR(255),
-    comment VARCHAR(255),
-    willreturn BOOLEAN
+    comment VARCHAR(255)
   )
 SQL
 
-db.execute(create_table_cmd)
+db.execute(create_table)
 
-def travel_input(db, date, location, comment, willreturn)
-  db.execute("INSERT INTO travel_notes (date, location, comment, willreturn) VALUES (?, ?, ?, ?)", [date, location, comment, willreturn])
+def travel_input(db, tripdate, location, comment)
+  db.execute("INSERT INTO travel_notes (tripdate, location, comment) VALUES (?, ?, ?)", [tripdate, location, comment])
 end
 
 100.times do
-  travel_input(db, Faker::Date.backward(365), Faker::Address.city, Faker::Lorem.paragraph, Faker::Boolean.boolean)
+  travel_input(db, '2010-10-10', Faker::Address.city, Faker::Lorem.paragraph)
 end
+
+# db.execute("INSERT INTO travel_notes (tripdate, location, comment) VALUES (10/20/2017, 'Mendoza', 'It was so great. Beautiful scenery.')")
