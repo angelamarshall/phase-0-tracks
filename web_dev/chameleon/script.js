@@ -8,3 +8,11 @@ function addPinkBorder(event) {
 
 var photo = document.getElementById("lizard-photo");
 photo.addEventListener("click", addPinkBorder);
+
+
+function colorText(event) {
+  event.target.style.color = "blue";
+}
+
+var paragraph = document.getElementById("about-my-pet");
+paragraph.addEventListener("click", colorText);
