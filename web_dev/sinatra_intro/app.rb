@@ -67,3 +67,13 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# write a method to search for all students from a specific campus
+
+get '/class/:campus' do
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  student.to_s
+end
+
+
+
