@@ -12,6 +12,29 @@ get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
+#contact method
+get '/contact' do
+  "4819 Lore Dr. 
+  Clarkston, MI
+  483297"
+end
+
+#a method for saying great job
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+#add two numbers and provide result 
+get '/addition/:number1/plus/:number2' do
+  answer = params[:number1].to_i + params[:number2].to_i
+  "#{answer}"
+end
+
 # write a GET route with
 # route parameters
 get '/about/:person' do
@@ -44,3 +67,13 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# write a method to search for all students from a specific campus
+
+get '/class/:campus' do
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  student.to_s
+end
+
+
+
