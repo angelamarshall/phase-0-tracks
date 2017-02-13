@@ -12,6 +12,16 @@ get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
+#contact method
+get '/contact' do
+  "4819 Lore Dr. 
+  Clarkston, MI
+  483297"
+end
+
+#a method for saying great job
+
+
 # write a GET route with
 # route parameters
 get '/about/:person' do
