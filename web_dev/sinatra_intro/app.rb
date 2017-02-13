@@ -20,7 +20,20 @@ get '/contact' do
 end
 
 #a method for saying great job
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
 
+#add two numbers and provide result 
+get '/addition/:number1/plus/:number2' do
+  answer = params[:number1].to_i + params[:number2].to_i
+  "#{answer}"
+end
 
 # write a GET route with
 # route parameters
